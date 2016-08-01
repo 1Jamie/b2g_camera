@@ -5,8 +5,12 @@
   "orientation": [
     "portrait"
   ],
-  "origin": "http://firefoxos.non-existent-domain-asdfg.com",
-  "name": "Test Redirection",
+  "icons": {
+ "128": "/icon/128x128.png"
+},
+
+  "origin": "www.github.com/Jamie1/b2g_camera",
+  "name": "Camera",
   "version": "0.0.1",
   "description": "proposed b2g camera app",
   "locales": {
@@ -16,10 +20,11 @@
   },
   "type": "privileged",
   "permissions": {
-    "READ_EXTERNAL_STORAGE",
-    "WRITE_EXTERNAL_STORAGE",
-    "CAMERA",
-    "CAPTURE_VIDEO_OUTPUT",
-    "systemXHR": {}
+
+    "systemXHR": {},
+    "READ_EXTERNAL_STORAGE": {},
+    "WRITE_EXTERNAL_STORAGE": {},
+    "CAMERA": {},
+    "CAPTURE_VIDEO_OUTPUT": {}
   }
 }
