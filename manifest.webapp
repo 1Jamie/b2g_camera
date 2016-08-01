@@ -9,7 +9,6 @@
  "128": "/icon/128x128.png"
 },
 
-  "origin": "www.github.com/Jamie1/b2g_camera",
   "name": "Camera",
   "version": "0.0.1",
   "description": "proposed b2g camera app",
