@@ -1,0 +1,25 @@
+{
+  "launch_path": "/index.html",
+  "default_locale": "en",
+  "fullscreen": "true",
+  "orientation": [
+    "portrait"
+  ],
+  "origin": "http://firefoxos.non-existent-domain-asdfg.com",
+  "name": "Test Redirection",
+  "version": "0.0.1",
+  "description": "proposed b2g camera app",
+  "locales": {
+    "en_US": {
+      "name": "Test camera"
+    }
+  },
+  "type": "privileged",
+  "permissions": {
+    "READ_EXTERNAL_STORAGE",
+    "WRITE_EXTERNAL_STORAGE",
+    "CAMERA",
+    "CAPTURE_VIDEO_OUTPUT",
+    "systemXHR": {}
+  }
+}
