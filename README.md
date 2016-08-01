@@ -1,8 +1,8 @@
-## b2g_camera
-#Work in progress camera app for B2G, this is frame work currently
+# b2g_camera
+Work in progress camera app for B2G, this is frame work currently
 the plan is to add support for video and flash, not sure thought with getusermedia we can do focus.
 
-#Feel free to help out with the app if wanted, the falsh is going to be implemented with the same api as the flashlight apps,
+##Feel free to help out with the app if wanted, the falsh is going to be implemented with the same api as the flashlight apps,
 it will call the flashbulb 500milsec before camera trigger till 500milseconds after trigger. The auto-flash will be a litle
 more challenging, the app will have to take a sample frame and parse the average rgb values to calculate whether or not to use flash
 
