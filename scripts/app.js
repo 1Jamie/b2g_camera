@@ -1,8 +1,8 @@
 (function() {
   // The width and height of the captured photo.
 
-  var width = 380;    // need to scale this properly for device
-  var height = 0;    
+  var width = 720;    // need to scale this properly for device
+  var height = 1280;    
 
 // tell us whether were straming form the camera currently or not, we havent started yet so... no
 
@@ -69,9 +69,11 @@
       
       
         if (isNaN(height)) {
-          height = width / (4/3);
+          height = width * 2;
         }
-      
+        
+        lFeed.setAttribute('width', width);
+        lFeed.setAttribute('height', height);
         video.setAttribute('width', width);
         video.setAttribute('height', height);
         canvas.setAttribute('width', width);
