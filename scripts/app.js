@@ -1,10 +1,11 @@
+// not sure why i set it up like this... but hell it works
 (function() {
   // The width and height of the captured photo.
 
   var width = 720;    // need to scale this properly for device
   var height = 1280;    
 
-// tell us whether were straming form the camera currently or not, we havent started yet so... no
+// tell us whether were straming form the camera currently or not, we havent started yet so... i hope not
 
   var streaming = false;
 
@@ -19,7 +20,7 @@
     photo.setAttribute('src', data);
   }
 
-//initalizing the elements properties we need and assigning to the specific elements
+//initalizing the elements stuffs we need and telling then what to be.. were ass holes
 
   var video = null;
   var canvas = null;
@@ -28,6 +29,7 @@
 
   console.log("variables set moving onto startup");
 
+//i hope you can figure out what this does by the name... ill give you a hint... it starts it
   function startup() {
     video = document.getElementById('lFeed');
     canvas = document.getElementById('canvas');
@@ -58,11 +60,12 @@
         video.play();
         console.log("feed should be displayed now, if not check for issues");
       },
+      // i set this here for in case someone fucked up
       function(err) {
         console.log("An error occured! " + err);
       }
     );
-
+    // this just sets some more of the cameras stuffs
     video.addEventListener('canplay', function(ev){
       if (!streaming) {
         height = video.videoHeight / (video.videoWidth/width);
@@ -84,17 +87,35 @@
 
     console.log('height and width of photo taken should now be set if not before');
 
+//I thought we might like the button to work... 
     startbutton.addEventListener('click', function(ev){
       takepicture();
-       console.log("picture should have been taken")
+      console.log("picture should have been taken")
+       // its obviously beautful we have to save this shit!
+      //savePic();
+      console.log("our shit should be saved")
       ev.preventDefault();
     }, false);
     
     clearPic();
   }
 
+// ill use this later to set image name at some point... whenever i figure it out
+var currentdate = new Date(); 
+var datetime = currentdate.getDate() +
+                + (currentdate.getMonth()+1)  + 
+                + currentdate.getFullYear() + 
+                + currentdate.getHours() + 
+                + currentdate.getMinutes() + 
+                + currentdate.getSeconds();
 
-//capture photo by taking a frame from the video feed and drawing it elsewhere then calling it
+//lets try to save it this way
+var savePic = function(){
+document.getElementById('photo').setAttribute( 'src', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==' );
+
+};
+
+//capture our magnificintly setup frame from the video feed and drawing it elsewhere then calling it up
 
   function takepicture() {
     var context = canvas.getContext('2d');
@@ -105,6 +126,7 @@
     
       var data = canvas.toDataURL('image/png');
       photo.setAttribute('src', data);
+
     } else {
       clearPic();
     }
