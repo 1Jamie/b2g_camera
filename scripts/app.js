@@ -90,10 +90,7 @@
 //I thought we might like the button to work... 
     startbutton.addEventListener('click', function(ev){
       takepicture();
-      console.log("picture should have been taken")
-       // its obviously beautful we have to save this shit!
-      //savePic();
-      console.log("our shit should be saved")
+      console.log("picture should have been taken");
       ev.preventDefault();
     }, false);
     
@@ -108,12 +105,6 @@ var datetime = currentdate.getDate() +
                 + currentdate.getHours() + 
                 + currentdate.getMinutes() + 
                 + currentdate.getSeconds();
-
-//lets try to save it this way
-var savePic = function(){
-document.getElementById('photo').setAttribute( 'src', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==' );
-
-};
 
 //capture our magnificintly setup frame from the video feed and drawing it elsewhere then calling it up
 
