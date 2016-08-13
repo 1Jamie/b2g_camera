@@ -92,9 +92,6 @@
     startbutton.addEventListener('click', function(ev){
       takepicture();
       console.log("picture should have been taken");
-       // its obviously beautful we have to save this shit!
-      //savePic();
-      //console.log("our shit should be saved");
       ev.preventDefault();
     }, false);
     
@@ -122,7 +119,7 @@ var datetime = currentdate.getDate() +
       var data = canvas.toDataURL('image/png');
       photo.setAttribute('src', data);
 
-      save();
+      settimeout(save(), 1000);
 
     } else {
       clearPic();
