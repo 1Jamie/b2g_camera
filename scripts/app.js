@@ -150,6 +150,7 @@ var save = function(){
 i++;
 }; else {
 	(canvas.toBlobHD || canvas.toBlob).call(canvas, function (b) {
+		var a = document.getElementById("clicker");
 		a.href=window.URL.createObjectURL(b);
 	}, "image/png");
 }
