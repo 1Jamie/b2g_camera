@@ -120,7 +120,7 @@ var datetime = currentdate.getDate() +
       context.drawImage(video, 0, 0, width, height);
     
       var data = canvas.toDataURL('image/png');
-      photo.setAttribute('src', data)
+      photo.setAttribute('src', data);
 
       save();
 
@@ -142,13 +142,13 @@ var save = function(){
     var a = document.createElement("a");
     a.textContent = "Download";
     document.body.appendChild(a);
-    a.id = "clicker"
+    a.id = "clicker";
     a.style.display = "none";
     a.download = "test.jpg";
     a.href = window.URL.createObjectURL(b);
 }, "image/png");
 i++;
-}; else {
+} else {
 	(canvas.toBlobHD || canvas.toBlob).call(canvas, function (b) {
 		var a = document.getElementById("clicker");
 		a.href=window.URL.createObjectURL(b);
