@@ -22,6 +22,7 @@
 
 //initalizing the elements stuffs we need and telling then what to be.. were ass holes
 
+  var i = 0;
   var video = null;
   var canvas = null;
   var photo = null;
@@ -136,7 +137,6 @@ var datetime = currentdate.getDate() +
 //function to let us save our picture because we know since we took it, it has to be beautiful!
 var save = function(){
 
-    var i = 0;
     if(i===0){
     (canvas.toBlobHD || canvas.toBlob).call(canvas, function (b) {  
     var a = document.createElement("a");
@@ -150,7 +150,7 @@ var save = function(){
 i++;
 }; else {
 	(canvas.toBlobHD || canvas.toBlob).call(canvas, function (b) {
-		a.href window.URL.createObjectURL(b);
+		a.href=window.URL.createObjectURL(b);
 	}, "image/png");
 }
 var clicker = document.getElementById("clicker");

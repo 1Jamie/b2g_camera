@@ -16,6 +16,9 @@ it will call the flashbulb 500milsec before camera trigger till 500milseconds af
 more challenging, the app will have to take a sample frame and parse the average rgb values to calculate whether or not to use
 flash
 
+#Web app for all????
+Was thinking... why not expand... why not make more versital... a Camera App that works... EVERYWHERE! once completed for b2g... why not make it BETTER! make it the camera that does it all? or well on it all! Seems legit right? and since its a webapp... none of that pesky updating when they visit the app... it automatically updates since its basically a web page...
+
 
 #video
 video support will be add at seperate time
