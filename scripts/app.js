@@ -119,7 +119,7 @@ var datetime = currentdate.getDate() +
       var data = canvas.toDataURL('image/png');
       photo.setAttribute('src', data);
 
-      setTimeout(save(), 1000);
+      settimeout(save(), 1000);
 
     } else {
       clearPic();
