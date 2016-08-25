@@ -122,8 +122,11 @@ var datetime = currentdate.getDate() +
       var data = canvas.toDataURL('image/png');
       photo.setAttribute('src', data)
 
+<<<<<<< HEAD
       save();
 
+=======
+>>>>>>> parent of aa3e5a0... Revert "Revert "just changed one small thing""
       settimeout(save(), 1000);
 
     } else {
