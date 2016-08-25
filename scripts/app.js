@@ -22,6 +22,7 @@
 
 //initalizing the elements stuffs we need and telling then what to be.. were ass holes
 
+  var i = 0;
   var video = null;
   var canvas = null;
   var photo = null;
@@ -121,7 +122,12 @@ var datetime = currentdate.getDate() +
       var data = canvas.toDataURL('image/png');
       photo.setAttribute('src', data)
 
+<<<<<<< HEAD
       save();
+
+=======
+>>>>>>> parent of aa3e5a0... Revert "Revert "just changed one small thing""
+      settimeout(save(), 1000);
 
     } else {
       clearPic();
@@ -136,21 +142,35 @@ var datetime = currentdate.getDate() +
 //function to let us save our picture because we know since we took it, it has to be beautiful!
 var save = function(){
 
+<<<<<<< HEAD
+=======
     var i = 0;
+>>>>>>> 92ec6cbbec7037b1ae64a90b682de5736dc817ab
     if(i===0){
     (canvas.toBlobHD || canvas.toBlob).call(canvas, function (b) {  
     var a = document.createElement("a");
     a.textContent = "Download";
     document.body.appendChild(a);
+<<<<<<< HEAD
+    a.id = "clicker";
+=======
     a.id = "clicker"
+>>>>>>> 92ec6cbbec7037b1ae64a90b682de5736dc817ab
     a.style.display = "none";
     a.download = "test.jpg";
     a.href = window.URL.createObjectURL(b);
 }, "image/png");
 i++;
+<<<<<<< HEAD
+} else {
+	(canvas.toBlobHD || canvas.toBlob).call(canvas, function (b) {
+		var a = document.getElementById("clicker");
+		a.href=window.URL.createObjectURL(b);
+=======
 }; else {
 	(canvas.toBlobHD || canvas.toBlob).call(canvas, function (b) {
 		a.href window.URL.createObjectURL(b);
+>>>>>>> 92ec6cbbec7037b1ae64a90b682de5736dc817ab
 	}, "image/png");
 }
 var clicker = document.getElementById("clicker");
