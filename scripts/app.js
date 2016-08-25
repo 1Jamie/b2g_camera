@@ -124,7 +124,7 @@ var datetime = currentdate.getDate() +
 
       save();
 
-      setTimeout(save(), 1000);
+      settimeout(save(), 1000);
 
     } else {
       clearPic();
